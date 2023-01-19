@@ -1,33 +1,23 @@
-package com.gls.parcelshop.model;
+package com.gls.parcelshop.model
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore
+import lombok.AllArgsConstructor
+import lombok.Builder
+import lombok.Data
+import lombok.NoArgsConstructor
+import javax.persistence.*
 
-@Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@Entity
 @Table(name = "address")
-public class Address {
+data class AddressEntity (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String street;
-    private String zip;
-    private String number;
-    private String consignee;
+    val id: Long? = null,
+    val street: String? = null,
+    val zip: String? = null,
+    val number: String? = null,
+    val consignee: String? = null,
 
     @OneToOne(mappedBy = "address")
     @JsonIgnore
-    private Parcel parcel;
-}
+    val parcel: ParcelEntity? = null,
+)

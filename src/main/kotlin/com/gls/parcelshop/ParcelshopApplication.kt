@@ -1,13 +1,12 @@
-package com.gls.parcelshop;
+package com.gls.parcelshop
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.SpringApplication
+import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-public class ParcelshopApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(ParcelshopApplication.class, args);
-	}
-
+object ParcelshopApplication {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        SpringApplication.run(ParcelshopApplication::class.java, *args)
+    }
 }

@@ -1,15 +1,13 @@
-package com.gls.parcelshop.service;
+package com.gls.parcelshop.service
 
-import com.gls.parcelshop.model.Parcel;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
+import com.gls.parcelshop.model.Parcel
+import lombok.extern.slf4j.Slf4j
+import org.springframework.stereotype.Service
 
 @Slf4j
 @Service
-public class NotificationService {
-
-    public void notifySomeoneAboutChange(Parcel parcel) {
-        log.info("Notification about parcel: {}", parcel);
+class NotificationService {
+    fun notifySomeoneAboutChange(parcel: Parcel?) {
+        NotificationService.log.info("Notification about parcel: {}", parcel)
     }
-
 }

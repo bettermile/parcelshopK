@@ -13,7 +13,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 
 @ExtendWith(SpringExtension::class)
 @SpringBootTest
-internal class RepositoryTests @Autowired constructor(private val parcelRepository: ParcelRepository) {
+internal class ParcelRepositoryTest(@Autowired private val parcelRepository: ParcelRepository) {
     @BeforeEach
     fun cleanup() {
         parcelRepository.deleteAll()
@@ -30,6 +30,28 @@ internal class RepositoryTests @Autowired constructor(private val parcelReposito
             )
         )
         val parcels = parcelRepository.findAll()
+        Assertions.assertEquals(1, parcels.size)
+    }
+
+    @Test
+    fun testFindAllByParcelNumber() {
+        parcelRepository.save(
+            Parcel(
+                address = createDefaultAddress(),
+                parcelNumber = "1000",
+                deliveryDate = "20250421",
+                deliveryState = DeliveryState.OUT_FOR_DELIVERY
+            )
+        )
+        parcelRepository.save(
+            Parcel(
+                address = createDefaultAddress(),
+                parcelNumber = "2000",
+                deliveryDate = "20250421",
+                deliveryState = DeliveryState.OUT_FOR_DELIVERY
+            )
+        )
+        val parcels = parcelRepository.findAllByParcelNumber("2000")
         Assertions.assertEquals(1, parcels.size)
     }
 

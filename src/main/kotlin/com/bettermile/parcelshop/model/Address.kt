@@ -1,7 +1,12 @@
-package com.gls.parcelshop.model
+package com.bettermile.parcelshop.model
 
 import com.fasterxml.jackson.annotation.JsonIgnore
-import javax.persistence.*
+import jakarta.persistence.Entity
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.GenerationType
+import jakarta.persistence.Id
+import jakarta.persistence.OneToOne
+import jakarta.persistence.Table
 
 @Entity
 @Table(name = "address")
@@ -17,6 +22,4 @@ class Address(
     @OneToOne(mappedBy = "address")
     @JsonIgnore
     private val parcel: Parcel? = null
-) {
-    constructor() : this(0, "", ",", "", "")
-}
+)

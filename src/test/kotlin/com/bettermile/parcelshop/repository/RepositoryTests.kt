@@ -1,8 +1,8 @@
-package com.gls.parcelshop.repository
+package com.bettermile.parcelshop.repository
 
-import com.gls.parcelshop.model.Address
-import com.gls.parcelshop.model.DeliveryState
-import com.gls.parcelshop.model.Parcel
+import com.bettermile.parcelshop.model.Address
+import com.bettermile.parcelshop.model.DeliveryState
+import com.bettermile.parcelshop.model.Parcel
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test

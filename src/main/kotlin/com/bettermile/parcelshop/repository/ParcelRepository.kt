@@ -1,6 +1,6 @@
-package com.gls.parcelshop.repository
+package com.bettermile.parcelshop.repository
 
-import com.gls.parcelshop.model.Parcel
+import com.bettermile.parcelshop.model.Parcel
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 

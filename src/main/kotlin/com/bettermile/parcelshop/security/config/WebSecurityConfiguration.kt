@@ -18,7 +18,11 @@ class WebSecurityConfiguration {
             .formLogin { it.disable() }
             .logout { it.disable() }
             .authorizeHttpRequests {
-                it.anyRequest().permitAll()
-            }
-            .build()
+                it
+                    .requestMatchers("/api/v1/parcels/**")
+                    .permitAll()
+                it
+                    .anyRequest()
+                    .authenticated()
+            }.build()
 }

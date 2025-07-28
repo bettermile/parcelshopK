@@ -1,17 +1,16 @@
-package com.gls.parcelshop
+package com.bettermile.parcelshop
 
-import com.gls.parcelshop.model.Address
-import com.gls.parcelshop.model.DeliveryState
-import com.gls.parcelshop.model.Parcel
-import com.gls.parcelshop.repository.ParcelRepository
-import com.gls.parcelshop.util.ApplicationLogger.info
-import org.springframework.beans.factory.annotation.Autowired
+import com.bettermile.parcelshop.model.Address
+import com.bettermile.parcelshop.model.DeliveryState
+import com.bettermile.parcelshop.model.Parcel
+import com.bettermile.parcelshop.repository.ParcelRepository
+import com.bettermile.parcelshop.util.ApplicationLogger.info
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.stereotype.Component
 
 @Component
-class AppStartupRunner @Autowired constructor(private val parcelRepository: ParcelRepository) : ApplicationRunner {
+class AppStartupRunner(private val parcelRepository: ParcelRepository) : ApplicationRunner {
     override fun run(args: ApplicationArguments) {
         info("Your application started with option names : ${args.optionNames}")
         parcelRepository.saveAll(

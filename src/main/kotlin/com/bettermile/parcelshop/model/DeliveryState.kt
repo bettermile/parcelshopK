@@ -1,4 +1,4 @@
-package com.gls.parcelshop.model
+package com.bettermile.parcelshop.model
 
 enum class DeliveryState {
     READY_FOR_DELIVERY,

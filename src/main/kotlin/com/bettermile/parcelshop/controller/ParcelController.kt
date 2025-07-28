@@ -1,17 +1,22 @@
-package com.gls.parcelshop.controller
+package com.bettermile.parcelshop.controller
 
-import com.gls.parcelshop.model.Parcel
-import com.gls.parcelshop.repository.ParcelRepository
-import com.gls.parcelshop.service.NotificationService
+import com.bettermile.parcelshop.model.Parcel
+import com.bettermile.parcelshop.repository.ParcelRepository
+import com.bettermile.parcelshop.service.NotificationService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.*
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.ResponseStatus
+import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/api/v1")
 class ParcelController(
-    private val notificationService: NotificationService
+    private val notificationService: NotificationService,
 ) {
 
     @Autowired

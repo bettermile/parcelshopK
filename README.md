@@ -6,12 +6,18 @@ The parcelshop is a fictional microservice for storing and retrieving parcels. P
 
 ## Your Task
 
-Me as a PO want to provide the option to get all parcels that are out for delivery for a given delivery date via a REST endpoint.
+Read through the codebase and comment on what you find. We're interested in your review of the
+existing code, not new functionalities.
 
-#### Acceptance Criteria:
-I can retrieve all parcels for a specific delivery date AND with a delivery state of "OUT_FOR_DELIVERY".
+Look at things like:
+- Correctness and bugs
+- Best practices and idiomatic use of Kotlin/Spring
+- Performance
+- Testing (coverage, quality, missing cases)
+- Security
+- Maintainability and code structure
 
 ## Does it work?
 
-Fire up the application and show us how your new endpoint is working. Use a browser,
-postman, insomnia or any http client you like or have a look at the test.http file.
+Fire up the application and see for yourself. Use a browser, postman, insomnia or any http
+client you like, or have a look at the test.http file.

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class NotificationService {
-    fun notifySomeoneAboutChange(parcel: Parcel) {
+    suspend fun notifySomeoneAboutChange(parcel: Parcel) {
         info("Notification about parcel: $parcel")
     }
 }

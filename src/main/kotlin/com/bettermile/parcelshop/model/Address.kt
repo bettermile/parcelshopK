@@ -10,5 +10,6 @@ class Address(
     var street: String,
     var zip: String,
     var number: String,
-    var consignee: String
+    var consignee: String,
+    val parcelId: Long? = null,
 )
